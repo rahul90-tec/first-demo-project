@@ -7,4 +7,5 @@ test('successful login', async ({ page }) => {
   await loginPage.login('standard_user', 'secret_sauce');
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
   await page.waitForTimeout(3000);
+  await expect(page).toHaveURL('https://www.saucedemooo.com/inventory.html');
 });
